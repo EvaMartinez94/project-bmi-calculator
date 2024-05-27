@@ -16,18 +16,30 @@ public final class CalculatorImc {
 
         System.out.printf("Tu IMC es %.2f\n",imc);
 
-        if (imc < 18.5) {
-            System.out.println("Esto indica bajo peso");
+        if (imc < 16) {
+            System.out.println("Esto indica delgadez severa");
             System.out.println("Tener un IMC bajo puede ser indicativo de desnutrición, un trastorno alimentario u otros problemas de salud. Es importante consultar a un profesional de salud para determinar la causa y el tratamiento adecuado.");
-        } else if (imc >= 18.5 && imc < 24.9) {
+        } else if (imc >= 16 && imc < 17) {
+            System.out.println("Esto indica delgadez moderada");
+            System.out.println("Este rango señala una delgadez moderada, lo que puede indicar una ingesta calórica insuficiente o un desequilibrio nutricional. Se recomienda consultar a un profesional de la salud para evaluar la situación y recibir orientación sobre cómo alcanzar un peso saludable.");
+        } else if (imc >= 17 && imc < 18.5) {
+            System.out.println("Esto indica delgadez leve");
+            System.out.println("Hablamos de un bajo peso, pero no algo grave. Puede sugerir una necesidad de ajustar la dieta y aumentar la ingesta calórica para alcanzar un peso óptimo y mejorar la salud general.");
+        } else if (imc >= 18.5 && imc < 25) {
             System.out.println("Esto indica peso normal");
-            System.out.println("Tener un peso normal se asocia con una menor probabilidad de enfermedades relacionadas con el peso. Es importante mantener un estilo de vida saludable para conservar este estado.");
-        } else if (imc >= 25 && imc < 29.9) {
+            System.out.println("Está dentro del rango considerado saludable para la mayoría de las personas. Indica un equilibrio adecuado entre el peso y la altura, lo que sugiere un menor riesgo de enfermedades relacionadas con el peso y una mejor salud en general. ");
+        } else if (imc >= 25 && imc <30) {
             System.out.println("Esto indica sobrepeso");
-            System.out.println("El sobrepeso puede aumentar el riesgo de desarrollar problemas de salud como enfermedades cardíacas, diabetes tipo 2 y presión arterial alta. Considera adoptar hábitos alimenticios más saludables y aumentar la actividad física.");
+            System.out.println("Esto indica un exceso de peso en relación con la altura, lo que puede aumentar el riesgo de desarrollar enfermedades crónicas como la diabetes tipo 2, enfermedades cardíacas y presión arterial alta. Se recomienda adoptar un estilo de vida más saludable, incluyendo una dieta equilibrada y ejercicio regular.");
+        } else if (imc >= 30 && imc <35) {
+            System.out.println("Esto indica obesidad leve");
+            System.out.println("Esto indica un nivel inicial de obesidad, lo que aumenta el riesgo de problemas de salud como la diabetes, enfermedades cardíacas y ciertos tipos de cáncer. Se recomienda buscar orientación médica y realizar cambios en el estilo de vida para perder peso de forma segura.");
+        } else if (imc >= 35 && imc <40) {
+            System.out.println("Esto indica obesidad moderada");
+            System.out.println("Indica un grado más avanzado de obesidad, lo que aumenta significativamente el riesgo de complicaciones de salud graves. Es importante buscar ayuda médica para iniciar un programa de pérdida de peso supervisado y adoptar cambios en el estilo de vida a largo plazo.");
         } else {
-            System.out.println("Esto indica obesidad");
-            System.out.println("La obesidad se asocia con un mayor riesgo de enfermedades graves como enfermedades cardíacas, diabetes tipo 2, apnea del sueño y ciertos tipos de cáncer. Es crucial buscar asesoramiento médico y adoptar cambios significativos en el estilo de vida.");
+            System.out.println("Esto indica obesidad mórbida");
+            System.out.println("Este estado indica obesidad extrema, con un alto riesgo de complicaciones médicas graves, incluyendo enfermedades cardíacas, accidente cerebrovascular, diabetes y problemas respiratorios. Se requiere atención médica urgente y una intervención médica y quirúrgica especializada para abordar esta condición de manera efectiva.");
         }
         scanner.close();
 
