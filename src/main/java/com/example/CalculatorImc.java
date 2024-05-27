@@ -12,7 +12,7 @@ public final class CalculatorImc {
         System.out.println("Ahora introduce tu altura en metros: ");
         double height = scanner.nextDouble();
 
-        double imc = weight / (height * height);
+        double imc = weight / math.pow(height,2);
 
         System.out.printf("Tu IMC es %.2f\n",imc);
 
