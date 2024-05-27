@@ -4,42 +4,42 @@ import java.util.Scanner;
 public final class CalculatorImc {
     public static void main(String[] args) {
 
-        System.out.println("Bienvenido a la calculadora del IMC");
+        System.out.println("Welcome to the BMI calculator");
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Introduce tu peso en kilogramos: ");
+        System.out.println("Enter your weight in kilograms:");
         double weight = scanner.nextDouble();
 
-        System.out.println("Ahora introduce tu altura en metros: ");
+        System.out.println("Now enter your height in meters:");
         double height = scanner.nextDouble();
 
-        double imc = weight / math.pow(height,2);
+        double bmi = weight / Math.pow(height,2);
 
-        System.out.printf("Tu IMC es %.2f\n",imc);
+        System.out.printf("Your BMI is %.2f\n",bmi);
 
-        if (imc < 16) {
-            System.out.println("Esto indica delgadez severa");
-            System.out.println("Tener un IMC bajo puede ser indicativo de desnutrición, un trastorno alimentario u otros problemas de salud. Es importante consultar a un profesional de salud para determinar la causa y el tratamiento adecuado.");
-        } else if (imc >= 16 && imc < 17) {
-            System.out.println("Esto indica delgadez moderada");
-            System.out.println("Este rango señala una delgadez moderada, lo que puede indicar una ingesta calórica insuficiente o un desequilibrio nutricional. Se recomienda consultar a un profesional de la salud para evaluar la situación y recibir orientación sobre cómo alcanzar un peso saludable.");
-        } else if (imc >= 17 && imc < 18.5) {
-            System.out.println("Esto indica delgadez leve");
-            System.out.println("Hablamos de un bajo peso, pero no algo grave. Puede sugerir una necesidad de ajustar la dieta y aumentar la ingesta calórica para alcanzar un peso óptimo y mejorar la salud general.");
-        } else if (imc >= 18.5 && imc < 25) {
-            System.out.println("Esto indica peso normal");
-            System.out.println("Está dentro del rango considerado saludable para la mayoría de las personas. Indica un equilibrio adecuado entre el peso y la altura, lo que sugiere un menor riesgo de enfermedades relacionadas con el peso y una mejor salud en general. ");
-        } else if (imc >= 25 && imc <30) {
-            System.out.println("Esto indica sobrepeso");
-            System.out.println("Esto indica un exceso de peso en relación con la altura, lo que puede aumentar el riesgo de desarrollar enfermedades crónicas como la diabetes tipo 2, enfermedades cardíacas y presión arterial alta. Se recomienda adoptar un estilo de vida más saludable, incluyendo una dieta equilibrada y ejercicio regular.");
-        } else if (imc >= 30 && imc <35) {
-            System.out.println("Esto indica obesidad leve");
-            System.out.println("Esto indica un nivel inicial de obesidad, lo que aumenta el riesgo de problemas de salud como la diabetes, enfermedades cardíacas y ciertos tipos de cáncer. Se recomienda buscar orientación médica y realizar cambios en el estilo de vida para perder peso de forma segura.");
-        } else if (imc >= 35 && imc <40) {
-            System.out.println("Esto indica obesidad moderada");
-            System.out.println("Indica un grado más avanzado de obesidad, lo que aumenta significativamente el riesgo de complicaciones de salud graves. Es importante buscar ayuda médica para iniciar un programa de pérdida de peso supervisado y adoptar cambios en el estilo de vida a largo plazo.");
+        if (bmi < 16) {
+            System.out.println("This indicates severe thinness");
+            System.out.println("Having a low BMI may be indicative of malnutrition, an eating disorder, or other health problems. It is important to consult a health professional to determine the cause and appropriate treatment.");
+        } else if (bmi >= 16 && bmi < 17) {
+            System.out.println("This indicates moderate thinness");
+            System.out.println("This range signals moderate thinness, which may indicate insufficient caloric intake or a nutritional imbalance. It is recommended to consult a health professional to evaluate the situation and receive guidance on how to achieve a healthy weight.");
+        } else if (bmi >= 17 && bmi < 18.5) {
+            System.out.println("This indicates slight thinness");
+            System.out.println("We are talking about low weight, but not something serious. It may suggest a need to adjust diet and increase caloric intake to achieve optimal weight and improve overall health.");
+        } else if (bmi >= 18.5 && bmi < 25) {
+            System.out.println("This indicates normal weight");
+            System.out.println("It is within the range considered healthy for most people. It indicates a proper balance between weight and height, suggesting a lower risk of weight-related diseases and better overall health.");
+        } else if (bmi >= 25 && bmi <30) {
+            System.out.println("This indicates overweight");
+            System.out.println("This indicates excess weight relative to height, which can increase the risk of developing chronic diseases such as type 2 diabetes, heart disease and high blood pressure. It is recommended to adopt a healthier lifestyle, including a balanced diet and regular exercise.");
+        } else if (bmi >= 30 && bmi <35) {
+            System.out.println("This indicates mild obesity");
+            System.out.println("This indicates a baseline level of obesity, which increases the risk of health problems such as diabetes, heart disease and certain types of cancer. It is recommended to seek medical guidance and make lifestyle changes to lose weight safely.");
+        } else if (bmi >= 35 && bmi <40) {
+            System.out.println("This indicates moderate obesity");
+            System.out.println("It indicates a more advanced degree of obesity, which significantly increases the risk of serious health complications. It is important to seek medical help to start a supervised weight loss program and adopt long-term lifestyle changes.");
         } else {
-            System.out.println("Esto indica obesidad mórbida");
-            System.out.println("Este estado indica obesidad extrema, con un alto riesgo de complicaciones médicas graves, incluyendo enfermedades cardíacas, accidente cerebrovascular, diabetes y problemas respiratorios. Se requiere atención médica urgente y una intervención médica y quirúrgica especializada para abordar esta condición de manera efectiva.");
+            System.out.println("This indicates morbid obesity");
+            System.out.println("This condition indicates extreme obesity, with a high risk of serious medical complications, including heart disease, stroke, diabetes and respiratory problems. Urgent medical attention and specialized medical and surgical intervention are required to address this condition effectively.");
         }
         scanner.close();
 
